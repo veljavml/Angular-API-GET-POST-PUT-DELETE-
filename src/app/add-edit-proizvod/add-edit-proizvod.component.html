@@ -1,0 +1,47 @@
+<p>add-edit-proizvod works!</p>
+
+<hr>
+<label>ID:</label> <br>
+<input type="number" [(ngModel)]="proizvod.id"> <br>
+<label>Naziv:</label> <br>
+<input type="text" [(ngModel)]="proizvod.naziv"> <br>
+<label>Boja:</label> <br>
+<input type="text" [(ngModel)]="proizvod.boja"> <br>
+<label>Cena: </label> <br>
+<input type="number" [(ngModel)]="proizvod.cena"> <br>
+<label>Kategorija: </label> <br>
+<input type="text" [(ngModel)]="proizvod.kategorija"> <br>
+
+<button (click)="postData()">Post Data</button> <br> <br>
+<button (click)="updateData()">Update</button> <br> <br> 
+<button (click)="deleteData()">Delete</button> <br> <br> 
+
+<form [formGroup]="formProizvod"  (ngSubmit)="save()">
+<mat-form-field appearance="fill"><br> 
+    <mat-label>ID:</mat-label>
+    <input matInput    formControlName="id">
+  </mat-form-field><br> 
+  <mat-form-field appearance="fill">
+    <mat-label>Naziv:</mat-label>
+    <input matInput required  formControlName="naziv">
+  </mat-form-field><br> 
+  <mat-form-field appearance="fill">
+    <mat-label>Boja:</mat-label>
+    <input matInput required  formControlName="boja">
+  </mat-form-field><br> 
+  <mat-form-field appearance="fill">
+    <mat-label>Cena:</mat-label>
+    <input matInput required  formControlName="cena">
+  </mat-form-field><br> 
+  <mat-form-field appearance="fill">
+    <mat-label>Kategorija:</mat-label>
+    <input matInput required  formControlName="kategorija">
+  </mat-form-field><br> 
+  <button type="submit" mat-stroked-button >Zapamti</button>
+  <br> 
+  <button mat-stroked-button (click)="goBack()">Nazad</button>
+  <br>
+ 
+
+</form>
+
